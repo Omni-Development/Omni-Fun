@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StikTech - Games</title>
+    <title>Games</title>
     <style>
         /* Base Styling */
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f5f5f7;
-            color: #333;
+            background-color: #f3f4f6;
+            color: #1f2937;
             text-align: center;
             margin: 0;
             padding: 0;
@@ -17,40 +17,43 @@
         h1 {
             font-size: 2.5rem;
             font-weight: 600;
-            color: #333;
+            color: #1f2937;
             margin: 1.5rem 0;
         }
         #flash-container {
             width: 100%;
             max-width: 800px;
             height: 600px;
-            background: #e0e0e0;
-            border-radius: 8px;
+            background: #e5e7eb;
+            border-radius: 12px;
             overflow: hidden;
             margin: auto;
             margin-top: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         /* Button Styling */
         .button {
             display: inline-block;
-            margin: 10px 5px;
-            padding: 10px 20px;
-            background-color: #007aff;
-            color: white;
+            margin: 10px 8px;
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: #ffffff;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 1rem;
             cursor: pointer;
             text-decoration: none;
-            transition: background-color 0.2s ease;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 6px rgba(59, 130, 246, 0.4);
         }
         .button:hover {
-            background-color: #005bb5;
+            background-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
         }
-        /* Make Ruffle player fill the container */
+        /* Ruffle player fill */
         #flash-container object {
             width: 100%;
             height: 100%;
@@ -58,6 +61,7 @@
     </style>
 </head>
 <body>
+    <h1>Game Viewer</h1>
     <div id="flash-container"></div>
     <a href="index.html" class="button">Back to Home</a>
     <button class="button" onclick="toggleFullscreen()">Fullscreen</button>
