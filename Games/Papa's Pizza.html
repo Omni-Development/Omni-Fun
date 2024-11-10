@@ -2,11 +2,8 @@
             <object>
                 <embed src="Flash\PapaPizza.swf" width="1450" height="800" />
                     <body>
-  <button class="button" onclick="toggleFullscreen()">Fullscreen</button>
-
-                    
+  <button class="button" onclick="toggleFullscreen()">Fullscreen</button>     
             </object>
-        
             <script src="Ruffle/ruffle.js"></script>
                 <script>
     function toggleFullscreen() {
@@ -19,14 +16,5 @@
         document.exitFullscreen();
       }
     }
-  </script>
-                <script>
-    window.addEventListener('load', () => {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(err => {
-          console.error(`Fullscreen request failed: ${err.message}`);
-        });
-      }
-    });
   </script>
         </body>
