@@ -7,14 +7,28 @@
             <script src="Ruffle/ruffle.js"></script>
                 <script>
     function toggleFullscreen() {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen()
-          .catch(err => {
-            alert(`Error attempting to enable fullscreen mode: ${err.message}`);
-          });
-      } else {
-        document.exitFullscreen();
-      }
-    }
+            const flashContainer = document.getElementById("flash-container");
+            if (!document.fullscreenElement) {
+                if (flashContainer.requestFullscreen) {
+                    flashContainer.requestFullscreen();
+                } else if (flashContainer.mozRequestFullScreen) { // Firefox
+                    flashContainer.mozRequestFullScreen();
+                } else if (flashContainer.webkitRequestFullscreen) { // Safari
+                    flashContainer.webkitRequestFullscreen();
+                } else if (flashContainer.msRequestFullscreen) { // IE/Edge
+                    flashContainer.msRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.mozCancelFullScreen) { // Firefox
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) { // Safari
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) { // IE/Edge
+                    document.msExitFullscreen();
+                }
+            }
+        }
   </script>
         </body>
