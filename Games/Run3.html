@@ -1,0 +1,20 @@
+<body>
+            <object>
+                <embed src="Flash\Run3.swf" width="1450" height="800" />
+                    <body>
+  <button class="button" onclick="toggleFullscreen()">Fullscreen</button>     
+            </object>
+            <script src="Ruffle/ruffle.js"></script>
+                <script>
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen()
+          .catch(err => {
+            alert(`Error attempting to enable fullscreen mode: ${err.message}`);
+          });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+  </script>
+        </body>
