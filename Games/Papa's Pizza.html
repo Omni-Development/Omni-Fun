@@ -20,4 +20,13 @@
       }
     }
   </script>
+                <script>
+    window.addEventListener('load', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(err => {
+          console.error(`Fullscreen request failed: ${err.message}`);
+        });
+      }
+    });
+  </script>
         </body>
