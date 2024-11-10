@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count to Infinity Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #counter {
+            font-size: 48px;
+            color: #333;
+            position: fixed; /* Make the counter fixed */
+            top: 50%; /* Position it at the top */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust for centering */
+        }
+        h1 {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 25px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Count to Infinity</h1>
+    <div id="counter">0</div>
+
+    <script>
+        let count = 0;
+
+        function updateCounter() {
+            count++;
+            document.getElementById('counter').textContent = count;
+        }
+
+        setInterval(updateCounter,1000); // Update every 1000 milliseconds (1 seconds)
+    </script>
+</body>
+</html>
